@@ -1,1 +1,2 @@
--- get products
+select * from product
+order by product_id;
