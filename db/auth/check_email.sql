@@ -1,1 +1,2 @@
--- check email file
+SELECT * FROM users
+WHERE email = $1;
