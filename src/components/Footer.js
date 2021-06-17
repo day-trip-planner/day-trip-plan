@@ -1,11 +1,12 @@
+import { Link } from "react-router-dom"
 
-
-const Header = () => {
-    return(
+const Footer = () => {
+    return (
         <div>
-            <h1>This is the Header page</h1>
+            &copy;{new Date().getFullYear()} Day Trip Planner | All rights reserved | Terms of Use
+
         </div>
     )
 }
 
-export default Header
+export default Footer
