@@ -46,6 +46,7 @@ const Auth = (props) => {
         </div>
 
 
+<<<<<<< HEAD
 
 
 
@@ -53,3 +54,6 @@ const Auth = (props) => {
 }
 
 export default Auth
+=======
+export default Auth
+>>>>>>> 6b9ee388a9f7256b54ec2ad35f9874f6d6765770
