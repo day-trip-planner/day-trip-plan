@@ -1,4 +1,3 @@
-
 // Auth Js
 import { useState } from 'react'
 import axios from 'axios'
@@ -44,13 +43,7 @@ const Auth = (props) => {
             <button onClick={handleLogin}>Login</button>
             <button onClick={handleRegister}>Register</button>
         </div>
-
-
-
-
-
-)
+    )
 }
 
 export default Auth
-
