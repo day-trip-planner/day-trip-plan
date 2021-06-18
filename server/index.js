@@ -1,20 +1,20 @@
 require('dotenv').config();
-const express = ('express');
-const massive = ('massive');
-const session = ('express-session');
+const express = require('express');
+const massive = require('massive');
+const session = require('express-session');
 
 
-const {SERVER_PORT, SESSION_SECRET, CONNECTION_STRING} = process.env;
+const { SERVER_PORT, SESSION_SECRET, CONNECTION_STRING } = process.env;
 
 // Controllers
 const authCtrl = require('./controllers/authCtrl');
-const productsCtrl = require('./controllers/productsController');
+const productsCtrl = require('./controllers/productsCtrl');
 const cartCtrl = require('./controllers/cartCtrl');
 const cartController = require('./controllers/cartCtrl');
 
 // APP Instance
 
-const app =  express();
+const app = express();
 
 // Top Level Middleware
 app.use(express.json())
@@ -24,19 +24,19 @@ app.use(
         resave: false,
         saveUninitialized: true,
         secret: SESSION_SECRET,
-        cookie: {maxAge: 6000 * 60 * 60 * 24 * 7 }
+        cookie: { maxAge: 6000 * 60 * 60 * 24 * 7 }
     })
 )
 
 // Database connection
 massive({
     connectionString: CONNECTION_STRING,
-    ssl: {rejectUnauthorized: false}
-}).then( db => {
+    ssl: { rejectUnauthorized: false }
+}).then(db => {
     app.set('db', db)
     console.log('POWER OVERWHELMING')
     app.listen(SERVER_PORT, () => console.log
-    (`Power coming through on port ${SERVER_PORT}`))
+        (`Power coming through on port ${SERVER_PORT}`))
 }).catch(err => console.log(err))
 
 
