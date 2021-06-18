@@ -30,9 +30,15 @@ CREATE TABLE junction (
   quantity INT
 );
 
+
 CREATE TABLE reviews (
     review_id SERIAL PRIMARY KEY,
-    review VARCHAR(60000), 
+    -- Product_id varchar not null refernces product_id,
+    review VARCHAR(60000) 
+    -- not null , 
     star TINYINT,
+    -- rating int not null check (
+      -- rating >=1 and rating <=5)
+    -- )
     user_id INT REFERENCES users(user_id)
 )
