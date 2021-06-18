@@ -12,11 +12,11 @@ module.exports = {
         })
     },
 
-    addProducts: (req, res) => {
+    addProduct: (req, res) => {
         const db = req.app.get('db')
         const {product_id} = req.params
     
-        db.products.add_products(product_id, name, price)
+        db.product.add_product(product_id, name, price)
             .then((product) => {
                 res.status(200).send(product)
             })
