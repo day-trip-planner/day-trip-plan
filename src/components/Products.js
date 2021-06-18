@@ -15,7 +15,7 @@ const Products = () => {
         url: 'https://priceline-com-provider.p.rapidapi.com/v1/cars-rentals/locations',
         params: {name: {location}},
         headers: {
-            'x-rapidapi-key': 'ab419d1536mshec16b6e719f722ep1c42dfjsn74ccdcfb7164',
+            'x-rapidapi-key': '5844aad306mshdb230a2d16e246dp127583jsn9bc5aa786234',
             'x-rapidapi-host': 'priceline-com-provider.p.rapidapi.com'
         }
     };
@@ -38,7 +38,7 @@ const Products = () => {
             date_time_pickup: {date_time_pickup}
         },
         headers: {
-            'x-rapidapi-key': 'ab419d1536mshec16b6e719f722ep1c42dfjsn74ccdcfb7164',
+            'x-rapidapi-key': '5844aad306mshdb230a2d16e246dp127583jsn9bc5aa786234',
             'x-rapidapi-host': 'priceline-com-provider.p.rapidapi.com'
         }
     };
