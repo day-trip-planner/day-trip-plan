@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom"
+import '../styles/header.css'
 
 const Header = () => {
-    return(
+    return (
         <header>
             <Link to='/'>Home</Link>
             <Link to='/auth'>Login</Link>
