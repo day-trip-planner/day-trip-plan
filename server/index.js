@@ -10,7 +10,6 @@ const {SERVER_PORT, SESSION_SECRET, CONNECTION_STRING} = process.env;
 const authCtrl = require('./controllers/authCtrl');
 const productsCtrl = require('./controllers/productsController');
 const cartCtrl = require('./controllers/cartCtrl');
-const cartController = require('./controllers/cartCtrl');
 
 // APP Instance
 
