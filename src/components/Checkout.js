@@ -1,6 +1,8 @@
-import { useEffect } from "react";
-import axios from "axios";
-
+import { useState } from 'react'
+import axios from 'axios'
+import { setUser } from '../redux/authReducer'
+import { setCart } from '../redux/cartReducer'
+import { useDispatch } from 'react-redux'
 
 const Checkout = (props) => {
     return(
