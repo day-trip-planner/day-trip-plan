@@ -42,4 +42,5 @@ a {
 }
 body{
   margin-top: 108px;
+  display: flex;
 }
