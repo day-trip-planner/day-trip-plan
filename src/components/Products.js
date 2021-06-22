@@ -1,10 +1,12 @@
 import axios from 'axios'
 import {useState} from 'react'
 
+const {REACT_APP_API_KEY, REACT_APP_API_HOST} = process.env
+
 const Products = () => {
 
     //car rental information
-    const [location] = useState('')
+    const [location] = useState('London')
     const [date_time_return] = useState('')
     const [location_return] = useState('')
     const [location_pickup] = useState('')
@@ -15,8 +17,8 @@ const Products = () => {
         url: 'https://priceline-com-provider.p.rapidapi.com/v1/cars-rentals/locations',
         params: {name: {location}},
         headers: {
-            'x-rapidapi-key': '5844aad306mshdb230a2d16e246dp127583jsn9bc5aa786234',
-            'x-rapidapi-host': 'priceline-com-provider.p.rapidapi.com'
+            'x-rapidapi-key': REACT_APP_API_KEY,
+            'x-rapidapi-host': REACT_APP_API_HOST
         }
     };
 
@@ -25,7 +27,7 @@ const Products = () => {
 	        console.log(response.data);
         })
         .catch((error) => {
-	        console.log(error);
+	        console.log('Products.js 30', error);
         });
 
     const carRentals = {
@@ -38,8 +40,8 @@ const Products = () => {
             date_time_pickup: {date_time_pickup}
         },
         headers: {
-            'x-rapidapi-key': '5844aad306mshdb230a2d16e246dp127583jsn9bc5aa786234',
-            'x-rapidapi-host': 'priceline-com-provider.p.rapidapi.com'
+            'x-rapidapi-key': REACT_APP_API_KEY,
+            'x-rapidapi-host': REACT_APP_API_HOST
         }
     };
       
