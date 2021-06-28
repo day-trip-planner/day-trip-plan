@@ -7,7 +7,7 @@ DROP TABLE IF EXISTS users;
 CREATE TABLE users (
   user_id SERIAL PRIMARY KEY,
   email VARCHAR(100),
-  password VARCHAR(2000),
+  password VARCHAR(2000)
 );
 
 CREATE TABLE product (
@@ -34,9 +34,10 @@ CREATE TABLE junction (
 CREATE TABLE reviews (
     review_id SERIAL PRIMARY KEY,
     -- Product_id varchar not null refernces product_id,
-    review VARCHAR(60000) 
+    review VARCHAR(60000), 
+
     -- not null , 
-    star TINYINT,
+    star INT,
     -- rating int not null check (
       -- rating >=1 and rating <=5)
     -- )
