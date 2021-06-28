@@ -1,10 +1,14 @@
-import {useEffect} from 'react';
+import { useEffect, useState } from 'react';
 import axios from 'axios';
 import {useSelector} from 'react-redux';
 import {useDispatch} from 'react-redux';
 import {setCart} from '../redux/cartReducer';
+import Checkout from './Checkout'
+import StripeContainer from './StripeContainer'
+
 
 const Cart = (props) => {
+  const [showItem, setShowItem] = useState(true)
   const {cart} = useSelector((store) => store.cartReducer)
   const dispatch = useDispatch()
 
@@ -60,7 +64,7 @@ const Cart = (props) => {
           <div key={product.product_cart_id}>
             <h4>{product.product_name}</h4>
             <h5>Qty: {product.quantity}</h5>
-            {/* {showItem ? <StripeContainer/> : <h3> </h3>} */}
+            {showItem ? <StripeContainer/> : <h3> </h3>}
             <button onClick={() => handleDeleteFromCart(product.product_id)}>X</button>
             <button onClick={() => handleChangeQty(product.product_id, product.quantity - 1)}>-</button>
             <button onClick={() => handleChangeQty(product.product_id, product.quantity + 1)}>+</button>

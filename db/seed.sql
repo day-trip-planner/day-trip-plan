@@ -34,7 +34,8 @@ CREATE TABLE junction (
 CREATE TABLE reviews (
     review_id SERIAL PRIMARY KEY,
     -- Product_id varchar not null refernces product_id,
-    review VARCHAR(60000),
+    review VARCHAR(60000), 
+
     -- not null , 
     star INT,
     -- rating int not null check (
