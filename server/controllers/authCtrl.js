@@ -3,6 +3,7 @@ const bcrypt = require('bcryptjs')
 
 module.exports = {
     register: async (req, res) => {
+        console.log("Work damnit")
         const db = req.app.get('db')
         const { email, password } = req.body
         const [result] = await db.auth.check_email(email)
@@ -12,11 +13,12 @@ module.exports = {
         const salt = bcrypt.genSaltSync(10)
         const hash = bcrypt.hashSync(password, salt)
         const [user] = await db.auth.register_user(email, hash)
-        const [cart] = await db.cart.create_cart(users.user_id)
+        const [cart] = await db.cart.create_cart(user.user_id)
         delete user.password
-        req.session.users = user
+        console.log(user)
+        req.session.user = user
         req.session.user.cart_id = cart.cart_id
-        return res.status(200).send(req.session.users)
+        return res.status(200).send(req.session.user)
     },
     login: async (req, res) => {
         const db = req.app.get('db')
@@ -29,8 +31,8 @@ module.exports = {
         if (!isAuthenticated) {
             return res.status(401).send('Password Incorrect.')
         }
-        const [cart] = await db.cart.get_cart(users.user_id)
-        delete users.password
+        const [cart] = await db.cart.get_cart(user.user_id)
+        delete user.password
         req.session.user = user
         req.session.user.cart_id = cart.cart_id
         return res.status(200).send(req.session.user)

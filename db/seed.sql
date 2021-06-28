@@ -7,13 +7,18 @@ DROP TABLE IF EXISTS users;
 CREATE TABLE users (
   user_id SERIAL PRIMARY KEY,
   email VARCHAR(100),
-  password VARCHAR(2000),
+  password VARCHAR(2000)
 );
 
 CREATE TABLE product (
   product_id SERIAL PRIMARY KEY,
   name VARCHAR(100),
   price int,
+  photo_one VARCHAR(1000),
+  photo_two VARCHAR(1000),
+  description VARCHAR(90000),
+  latitude VARCHAR(1000),
+  longitude VARCHAR(1000),
   user_id int REFERENCES users(user_id)
 );
 
@@ -34,11 +39,13 @@ CREATE TABLE junction (
 CREATE TABLE reviews (
     review_id SERIAL PRIMARY KEY,
     -- Product_id varchar not null refernces product_id,
-    review VARCHAR(60000) 
+    review VARCHAR(60000), 
+
     -- not null , 
-    star TINYINT,
+    star INT,
     -- rating int not null check (
       -- rating >=1 and rating <=5)
     -- )
     user_id INT REFERENCES users(user_id)
 )
+
