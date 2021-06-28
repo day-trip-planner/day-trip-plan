@@ -1,12 +1,15 @@
-import axios from 'axios'
+import { useState } from 'react';
+import StripeContainer from './StripeContainer';
 
-import { setUser } from '../redux/authReducer'
-import { setCart } from '../redux/cartReducer'
-import { useDispatch } from 'react-redux'
-import { object } from 'prop-types'
-
-const Checkout = () => {
-<div>
-    <h1>This is the Cart page</h1>
-</div>
+function Checkout() {
+  const [showItem, setShowItem] = useState(false)
+  return (
+    <div className="App">
+      <h1>The Spatula Store</h1>
+      {/* {showItem ? <StripeContainer/> : <> <h3>$10.00</h3> <img src={spatula} alt="Spaluta" /> */}
+      {/* <button onClick={() => setShowItem(true)}>Purchase Spatula</button></>} */}
+    </div>
+  );
 }
+
+export default Checkout;

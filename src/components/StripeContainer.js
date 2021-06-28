@@ -1,18 +1,17 @@
-import React from 'react'
-import { Elements } from '@stripe/react-stripe-js'
-import { loadStripe } from '@stripe/stripe-js'
-import PaymentForm from './PaymentForm'
+ 
+import { Elements } from "@stripe/react-stripe-js"
+import { loadStripe } from "@stripe/stripe-js"
+import React from "react"
+import PaymentForm from "./PaymentForm"
 
-
-const  PUBLIC_KEY = 'pk_test_51J5XqEEBwtcHnvdzRTtHyCcWpqQWDNSpTM4WjPlBRVvXD4GmtVE7smKaLDd0Sj4LtxwQbe9LgCqEMIykBABK8wqf00USgKLjPU'
+const PUBLIC_KEY = "pk_test_rgWMA3zxjAtwaB6iV8b5W40x"
 
 const stripeTestPromise = loadStripe(PUBLIC_KEY)
 
-
-export default function StripeContainer (){
-    return(
-        <Elements stripe={stripeTestPromise}>
-            <Checkout />
-        </Elements>
-    )
+export default function StripeContainer() {
+	return (
+		<Elements stripe={stripeTestPromise}>
+			<PaymentForm />
+		</Elements>
+	)
 }

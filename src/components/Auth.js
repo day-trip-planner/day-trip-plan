@@ -18,7 +18,7 @@ const Auth = (props) => {
                     props.history.push('/products')
                 })
             })
-            .catch(err => console.log(err))
+            .catch(err => console.log("This fired"))
     }
     const handleLogin = () => {
         axios.post('/auth/login', { email, password })

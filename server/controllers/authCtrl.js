@@ -32,7 +32,7 @@ module.exports = {
             return res.status(401).send('Password Incorrect.')
         }
         const [cart] = await db.cart.get_cart(user.user_id)
-        delete users.password
+        delete user.password
         req.session.user = user
         req.session.user.cart_id = cart.cart_id
         return res.status(200).send(req.session.user)
