@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
-import '../../App.css'
+import '../styles/Navbar.css'
 import ReorderIcon from '@material-ui/icons/Reorder'
 import SearchIcon from '@material-ui/icons/Search'
 
