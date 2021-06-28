@@ -14,6 +14,11 @@ CREATE TABLE product (
   product_id SERIAL PRIMARY KEY,
   name VARCHAR(100),
   price int,
+  photo_one VARCHAR(1000),
+  photo_two VARCHAR(1000),
+  description VARCHAR(90000),
+  latitude VARCHAR(1000),
+  longitude VARCHAR(1000),
   user_id int REFERENCES users(user_id)
 );
 
@@ -43,3 +48,4 @@ CREATE TABLE reviews (
     -- )
     user_id INT REFERENCES users(user_id)
 )
+
