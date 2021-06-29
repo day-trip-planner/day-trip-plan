@@ -5,9 +5,10 @@ function Checkout() {
   const [showItem, setShowItem] = useState(false)
   return (
     <div className="App">
-      <h1>Luxury Inns</h1>
-      {/* {showItem ? <StripeContainer/> : <> <h3>$10.00</h3> <img src={spatula} alt="Spaluta" />
-      <button onClick={() => setShowItem(true)}>Purchase Spatula</button></>} */}
+      <h1>Check out</h1>
+      <button onClick={() => setShowItem(true)}>Purchase item</button>
+      {showItem ? <StripeContainer/> : null}
+
     </div>
   );
 }
