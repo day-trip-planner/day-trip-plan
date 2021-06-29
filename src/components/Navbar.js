@@ -13,7 +13,7 @@ function Navbar() {
         <div className="Navbar">
             <div className="leftSide">
                 <div className="links" id={showLinks ? "hidden" : ""}>
-                    <Link to='/'>Home</Link>
+                    <Link className="title" to='/'>The Day Tripper</Link>
                     <Link to='/auth'>Login</Link>
                     <Link to='/products'>Packages</Link>
                     <Link to='/cart'>Cart</Link>
