@@ -1,7 +1,6 @@
 import React from "react";
 // import StarRating from "./StarRating";
 
-
 	const Reviews = () => {
 		return (
 			<div>
