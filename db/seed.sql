@@ -14,8 +14,8 @@ CREATE TABLE product (
   product_id SERIAL PRIMARY KEY,
   name VARCHAR(100),
   price int,
-  photo_one VARCHAR(1000),
-  photo_two VARCHAR(1000),
+  photo_one VARCHAR(7000),
+  photo_two VARCHAR(7000),
   description VARCHAR(90000),
   latitude INT,
   longitude int,
@@ -38,19 +38,13 @@ CREATE TABLE junction (
 
 CREATE TABLE reviews (
     review_id SERIAL PRIMARY KEY,
-    -- Product_id varchar not null refernces product_id,
     review VARCHAR(60000), 
-
-    -- not null , 
     star INT,
-    -- rating int not null check (
-      -- rating >=1 and rating <=5)
-    -- )
     user_id INT REFERENCES users(user_id)
 );
 
 insert into product
-(name, price, photo_one, photo_two, description, latitude, longtitude)
+(name, price, photo_one, photo_two, description, latitude, longitude)
 values
 ('Luxury Inns - Grand Canyon', 239, 'https://www.grandcanyonlodges.com/content/uploads/2020/05/Bright-Angel-Exterior-1600x510.jpg', 
 'https://www.grandcanyonlodges.com/content/uploads/2013/07/8-Cabin-3-1050x510.jpg', 
@@ -62,7 +56,7 @@ values
 'These oceanfront bungalows offer a truly unforgettable Hawaiian experience. Our beautiful accommodations are ideally equipped with modern amenities to make you feel right at home. Come and enjoy your next luxurious stay with us.',
 20.802957, -156.310683),
 
-("Luxury Inns - San Francisco", 82, 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/8522846.jpg?k=341db20d9dc54fd0ff558b1af10561cd6cd87e9fc3bfc906fcf1d109d9aeb8c4&o=&hp=1 ',
+('Luxury Inns - San Francisco', 82, 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/8522846.jpg?k=341db20d9dc54fd0ff558b1af10561cd6cd87e9fc3bfc906fcf1d109d9aeb8c4&o=&hp=1 ',
 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/29879430.jpg?k=2cd32888d322a1903d69267f1e45c6d5ffa2cc5d0b4d7a3fa162b71860dcff31&o=&hp=1 ',
 'Featuring city views, this room features high ceilings, an innovative pull-out minibar, a modern desk with built-in USB ports and bedside reading lights. The perfect office getaway for anyone traveling for work.',
 37.779026, -122.419906),
@@ -126,15 +120,15 @@ values
 'description', 29.424600, -98.495141),
 
 ('Luxury Inns - Savannah', 147, 'https://shershegoes.com/wp-content/uploads/Best-Hotels-in-Savannah-GA.jpg', 
-'https://d3qpqomdjdty0i.cloudfront.net/perrylanehotel.com-1533827170/cms/cache/v2/5b464a1176e77.jpg/1920x1080/fit/80/4928dba7921c4a71ea2b0684af0e66c5.jpg ', 
+'https://d3qpqomdjdty0i.cloudfront.net/perrylanehotel.com-1533827170/cms/cache/v2/5b464a1176e77.jpg/1920x1080/fit/80/4928dba7921c4a71ea2b0684af0e66c5.jpg', 
 'description', 32.080926, -81.091177),
 
-('Luxury Inns - Mackinac Island', 202, 'https://cdn.galaxy.tf/thumb/sizeW1920/uploads/2s/cms_image/001/583/176/1583176564_5e5d5b74c4086-thumb.jpg ', 
-'https://2486634c787a971a3554-d983ce57e4c84901daded0f67d5a004f.ssl.cf1.rackcdn.com/mission-point/media/cache/missionpoint-rooms-new-01-5c9cf41b43086-558x382.jpg ', 
-'description', : 45.849204, -84.619672),
+('Luxury Inns - Mackinac Island', 202, 'https://cdn.galaxy.tf/thumb/sizeW1920/uploads/2s/cms_image/001/583/176/1583176564_5e5d5b74c4086-thumb.jpg', 
+'https://2486634c787a971a3554-d983ce57e4c84901daded0f67d5a004f.ssl.cf1.rackcdn.com/mission-point/media/cache/missionpoint-rooms-new-01-5c9cf41b43086-558x382.jpg', 
+'description', 45.849204, -84.619672),
 
-('Luxury Inns - Charleston', 223, 'https://www.planetware.com/wpimages/2019/03/south-carolina-charleston-best-hotels-belmond-charleston-place.jpg ', 
-'https://cf.bstatic.com/xdata/images/hotel/max1024x768/151433709.jpg?k=bc696768074ddf4e6c2de31de1038f0947998dbe994ff9cd50dd7a37d42146fa&o=&hp=1 ', 
+('Luxury Inns - Charleston', 223, 'https://www.planetware.com/wpimages/2019/03/south-carolina-charleston-best-hotels-belmond-charleston-place.jpg', 
+'https://cf.bstatic.com/xdata/images/hotel/max1024x768/151433709.jpg?k=bc696768074ddf4e6c2de31de1038f0947998dbe994ff9cd50dd7a37d42146fa&o=&hp=1', 
 'description', 32.787601, -79.940273),
 
 ('Luxury Inns - Portland', 138, 'https://content.fortune.com/wp-content/uploads/2019/12/wlk_exterior_alder_4250a.jpg ', 
@@ -154,3 +148,4 @@ values
 'https://media.millenniumhotels.com/Live/B/3/B/B3BBF209-B7A9-4334-AE63-353BD00D9EEE/LakefrontAnchorage_slide01.jpg?r=210603125100 ',
 'A lakefront property, thoughtfully furnished to give our guests a luxurious stay away from home. Our deluxe rooms are spacious and full of the charm of the Alaskan comforts.',
 61.216313, -149.894852);
+
