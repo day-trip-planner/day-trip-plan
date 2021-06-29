@@ -1,16 +1,19 @@
 import React from "react";
-	import StarRating from "./StarRating";
+// import StarRating from "./StarRating";
 
-	const Reviews = ({ reviews }) => {
-	return (
-        <div>
-            <h1>This is the Dashboard page
 
-            </h1>
-        </div>
-    )
-}
-	//   return (
+	const Reviews = () => {
+		return (
+			<div>
+				<h1>Reviews
+				</h1>
+			</div>
+		)
+	}
+	
+	
+// { reviews }
+
 	//     <div className="row row-cols-3 mb-2">
 	//       {reviews.map((review) => {
 	//         return (
@@ -34,5 +37,6 @@ import React from "react";
 	//     </div>
 	//   );
 	// };
+
 
 	export default Reviews;
