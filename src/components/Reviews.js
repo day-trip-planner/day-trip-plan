@@ -4,7 +4,7 @@ import React from "react";
 	const Reviews = () => {
 		return (
 			<div>
-				<h1>This is the Reviews page
+				<h1>Reviews
 	
 				</h1>
 			</div>
