@@ -6,10 +6,23 @@
 body {
   margin: 0;
   padding: 0;
+  background-color: rgb(255, 255, 255);
 }
 
 button{
+  background-color: #FFCAD4;
   cursor: pointer;
 }
 
 
+.content-wrap {
+  background-color: #9D8189;
+  position: absolute;
+  width: 100vw;
+  bottom: 0px;
+  text-align: center;
+}
+
+FormGroup {
+background-color: blueviolet;
+}

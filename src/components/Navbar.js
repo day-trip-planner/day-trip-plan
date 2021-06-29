@@ -16,7 +16,7 @@ function Navbar() {
                     <Link className="title" to='/'>The Day Tripper</Link>
                     <Link to='/auth'>Login</Link>
                     <Link to='/products'>Packages</Link>
-                    <Link to='/cart'>Checkout</Link>
+                    <Link to='/cart'>Cart</Link>
                     <Link to='/reviews'>Reviews</Link>
                 </div>
                 <button onClick={() => setShowLinks(!showLinks)}> <ReorderIcon /> </button>
