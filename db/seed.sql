@@ -47,7 +47,7 @@ CREATE TABLE reviews (
       -- rating >=1 and rating <=5)
     -- )
     user_id INT REFERENCES users(user_id)
-)
+);
 
 insert into product
 (name, price, photo_one, photo_two, description, latitude, longtitude)
