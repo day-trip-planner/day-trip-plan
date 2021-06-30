@@ -1,8 +1,8 @@
 module.exports = {
     getProducts: (req, res) => {
         const db = req.app.get('db')
-
-        db.product.get_products()
+        console.log('work')
+        db.products.get_products()
         .then(product => {
             res.status(200).send(product)
         })
