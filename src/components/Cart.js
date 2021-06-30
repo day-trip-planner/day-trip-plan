@@ -58,15 +58,13 @@ const Cart = (props) => {
   return(
     <div>
       <h1>Cart Page</h1>
-      <button onClick={() => setShowItem(true)}>Purchase Spatula</button>
-      {showItem ? <StripeContainer/> : null}
+
+      <Checkout />
       {cart.map((product) => {
-        return(
+        return(       
           <div key={product.product_cart_id}>
             <h4>{product.product_name}</h4>
             <h5>Qty: {product.quantity}</h5>
-            
-      
             <button onClick={() => handleDeleteFromCart(product.product_id)}>X</button>
             <button onClick={() => handleChangeQty(product.product_id, product.quantity - 1)}>-</button>
             <button onClick={() => handleChangeQty(product.product_id, product.quantity + 1)}>+</button>
