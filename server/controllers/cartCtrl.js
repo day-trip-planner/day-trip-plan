@@ -23,7 +23,7 @@ module.exports = {
       const db = req.app.get('db')
       const {user} = req.session
       const {product_id} = req.params
-      const {quantity} = res.body
+      const {quantity} = req.body
       if(!user){
         return res.status(511).send("User is not logged in.")
       }
@@ -64,7 +64,7 @@ module.exports = {
       const {quantity} = req.body
       if(!user){
         return res.status(511).send("User is not logged in.")
-      } db.cart.change_cart_qty(user.cart_id, product_id, quantity)
+      } db.cart.edit_cart_qty(user.cart_id, product_id, quantity)
       .then((cartProducts) => {
         res.status(200).send(cartProducts)
       }).catch(err => {
