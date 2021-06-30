@@ -77,7 +77,7 @@
   .Navbar .leftSide button{
     display: flex;
   }
- 
+}
 
 
 .Navbar .leftSide #hidden {
@@ -147,4 +147,4 @@
   .Navbar .leftSide #hidden a{
     margin: 10px;
     font-size: 25px;
-
+  }
