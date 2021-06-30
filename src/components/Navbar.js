@@ -30,7 +30,7 @@ function Navbar(props) {
         <div className="Navbar">
             <div className="leftSide">
                 <div className="links" id={showLinks ? "hidden" : ""}>
-                    <Link className="title" to='/'>The Day Tripper</Link>
+                    <Link className="title" to='/'>Luxury Inns</Link>
                     {!user ? <Link to='/auth'>Login</Link> : null}
                     <Link to='/products'>Packages</Link>
                     <Link to='/cart'>Cart</Link>
