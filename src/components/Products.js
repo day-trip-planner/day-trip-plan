@@ -11,7 +11,7 @@ const Products = (props) => {
     const dispatch = useDispatch()
 
     useEffect(() => {
-        axios.get('/api/product')
+        axios.get('/api/products')
         .then((res) => {
             setProducts(res.data) 
         })
@@ -55,8 +55,8 @@ const Products = (props) => {
                     <div key={product.product_id}>
                         <div>{product.name}</div>
                         <div>{product.price}</div>
-                        <div>{product.photo_one}</div>
-                        <div>{product.photo_two}</div>
+                        <img src={product.photo_one}/>
+                        <img src={product.photo_two}/>
                         <div>{product.description}</div>
                         {user &&
                         <button onClick={() =>
