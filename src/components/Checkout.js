@@ -6,8 +6,8 @@ function Checkout() {
   return (
     <div className="App">
       <h1>Luxury Inns</h1>
-      {/* {showItem ? <StripeContainer/> : <> <h3>$10.00</h3> <img src={spatula} alt="Spaluta" />
-      <button onClick={() => setShowItem(true)}>Purchase Spatula</button></>} */}
+      {showItem ? <StripeContainer/> : <>
+      <button onClick={() => setShowItem(true)}>Complete Purchase</button></>}
     </div>
   );
 }

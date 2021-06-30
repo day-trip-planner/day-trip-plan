@@ -58,8 +58,9 @@ const Cart = (props) => {
   return(
     <div>
       <h1>Cart Page</h1>
-      <button onClick={() => setShowItem(true)}>Purchase Spatula</button>
-      {showItem ? <StripeContainer/> : null}
+      {/* <button onClick={() => setShowItem(true)}>Complete Checkout</button>
+      {showItem ? <StripeContainer/> : null} */}
+      <Checkout />
       {cart.map((product) => {
         return(
           <div key={product.product_cart_id}>

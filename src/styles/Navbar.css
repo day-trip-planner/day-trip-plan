@@ -26,7 +26,7 @@
   
   .Navbar .leftSide .links a {
     text-decoration: none;
-    color: white;
+    color: rgb(245, 239, 239);
     font-size: 25px;
     margin-left: 15px;
   }
@@ -93,4 +93,3 @@
     margin: 10px;
     font-size: 25px;
   }
-  
