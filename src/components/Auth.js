@@ -35,14 +35,17 @@ const Auth = (props) => {
 
     return (
 
-        <div>
+        <div className="logContainer">
             <h1>Login/Register</h1>
             <h5>Username</h5>
             <input value={email} onChange={(e) => setUsername(e.target.value)} />
             <h5>Password</h5>
             <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+            
+            <div>
             <button onClick={handleLogin}>Login</button>
             <button onClick={handleRegister}>Register</button>
+            </div>
         </div>
     )
 }

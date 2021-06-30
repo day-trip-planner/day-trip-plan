@@ -77,10 +77,8 @@
   .Navbar .leftSide button{
     display: flex;
   }
-  .Navbar .leftSide .links{
-    display: none;
-  }
 }
+
 
 .Navbar .leftSide #hidden {
   position: absolute;
@@ -146,8 +144,7 @@
     align-items: center;
   }
   
-  .Navbar .leftSide #hidden a{
+  .Navbar .leftSide #hidden a {
     margin: 10px;
     font-size: 25px;
   }
-  

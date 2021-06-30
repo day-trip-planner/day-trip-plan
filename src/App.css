@@ -1,7 +1,7 @@
-.App {
+/* .App {
   width: 100vw;
   height: 100vh
-}
+} */
 
 body {
   margin: 0;
@@ -9,20 +9,33 @@ body {
   background-color: rgb(255, 255, 255);
 }
 
+
 button{
   background-color: #FFCAD4;
   cursor: pointer;
+  background-color: #FFCAD4;
 }
 
-
-.content-wrap {
-  background-color: #9D8189;
-  position: absolute;
-  width: 100vw;
-  bottom: 0px;
+footer {
   text-align: center;
 }
 
-FormGroup {
-background-color: blueviolet;
+.logContainer {
+  width: 20vw;
+  position: absolute;
+  top: 300px;
+  right: 800px;
+  padding: 25px;
+  text-align: center;
+  background-color: #F4ACB7;
+  -webkit-box-shadow: 10px 26px 13px 2px rgba(0,0,0,0.3); 
+box-shadow: 10px 26px 13px 2px rgba(0,0,0,0.3);
+} 
+
+img {
+  height: 300px;
+  width: 300px;
+  margin: 25px;
+  -webkit-box-shadow: 8px 12px 12px 6px rgba(0,0,0,0.81); 
+box-shadow: 8px 12px 12px 6px rgba(0,0,0,0.81);
 }
