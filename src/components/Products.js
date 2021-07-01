@@ -56,7 +56,7 @@ const Products = (props) => {
                 return (
                     <div className="product-item" key={product.product_id}>
                         <div>{product.name}</div>
-                        <div>{product.price}</div>
+                        <div>$ {product.price}</div>
                         <div className="product-img-container">
                             <img src={product.photo_one} />
                             <img src={product.photo_two} />
