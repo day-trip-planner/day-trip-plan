@@ -2,7 +2,7 @@ import React from "react";
 import '../styles/reviews.css'
 
 
-const Review = () => {
+const Reviews = () => {
   return(
     <div>
       <h1>Review Page</h1>
