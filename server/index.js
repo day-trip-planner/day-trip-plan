@@ -51,23 +51,23 @@ app.post("/payment", cors(), async (req, res) => {
 app.use(express.json())
 // Sessions & cookies
 app.use(
-    session({
-        resave: false,
-        saveUninitialized: true,
-        secret: SESSION_SECRET,
-        cookie: { maxAge: 6000 * 60 * 60 * 24 * 7 }
-    })
+	session({
+		resave: false,
+		saveUninitialized: true,
+		secret: SESSION_SECRET,
+		cookie: { maxAge: 6000 * 60 * 60 * 24 * 7 }
+	})
 )
 
 // Database connection
 massive({
-    connectionString: CONNECTION_STRING,
-    ssl: { rejectUnauthorized: false }
+	connectionString: CONNECTION_STRING,
+	ssl: { rejectUnauthorized: false }
 }).then(db => {
-    app.set('db', db)
-    console.log('POWER OVERWHELMING')
-    app.listen(SERVER_PORT, () => console.log
-        (`Power coming through on port ${SERVER_PORT}`))
+	app.set('db', db)
+	console.log('POWER OVERWHELMING')
+	app.listen(SERVER_PORT, () => console.log
+		(`Power coming through on port ${SERVER_PORT}`))
 }).catch(err => console.log(err))
 
 

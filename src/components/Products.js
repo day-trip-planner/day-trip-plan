@@ -60,7 +60,7 @@ const Products = (props) => {
                         <div>{product.description}</div>
                         {user &&
                         <button onClick={() =>
-                        handleAddToCart(products.product_id)}>Add To Cart</button>}
+                        handleAddToCart(product.product_id)}>Add To Cart</button>}
                     </div>
                 )
             })}
