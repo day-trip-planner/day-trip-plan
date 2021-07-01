@@ -40,3 +40,8 @@ img {
   box-shadow: 8px 12px 12px 6px rgba(0,0,0,0.81);
 }
 
+.rev-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(218, 42, 194);
+}
