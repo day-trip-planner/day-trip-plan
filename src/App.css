@@ -95,7 +95,8 @@ img:hover {
 }
 .product-item{
 width: 700px;
-padding: 50px
+padding: 50px;
+font-size: 25px;
 }
 .product-img-container{
   display: flex;
