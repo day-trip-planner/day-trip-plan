@@ -15,6 +15,7 @@ const { SERVER_PORT, SESSION_SECRET, CONNECTION_STRING } = process.env;
 const authCtrl = require('./controllers/authCtrl');
 const productsCtrl = require('./controllers/productsCtrl');
 const cartCtrl = require('./controllers/cartCtrl');
+const reviewsCtrl = require('./controllers/reviewsCtrl');
 
 // APP Instance
 
@@ -85,3 +86,9 @@ app.get('/api/cart', cartCtrl.getCart);
 app.post('/api/cart/:product_id', cartCtrl.addToCart);
 app.delete('/api/cart/:product_id', cartCtrl.deleteItemFromCart);
 app.put('/api/cart/:product_id', cartCtrl.changeCartQty)
+
+//Reviews
+app.get('/api/reviews', reviewsCtrl.getReview)
+app.post('/api/reviews/:review_id', reviewsCtrl.addToReview)
+app.delete('/api/reviews/:review_id', reviewsCtrl.deleteItemFromReview)
+app.put('/api/reviews/:review_id', reviewsCtrl.editReview)
