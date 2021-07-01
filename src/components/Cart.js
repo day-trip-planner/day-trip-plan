@@ -5,6 +5,7 @@ import {useDispatch} from 'react-redux';
 import {setCart} from '../redux/cartReducer';
 import Checkout from './Checkout'
 import StripeContainer from './StripeContainer'
+import '../styles/cart.css'
 
 
 const Cart = (props) => {
