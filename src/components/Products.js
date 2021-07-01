@@ -3,6 +3,7 @@ import axios from 'axios'
 import { useSelector, useDispatch } from 'react-redux'
 import {Link} from 'react-router-dom'
 import {setCart} from '../redux/cartReducer'
+import Reviews from './Reviews'
 
 const Products = (props) => {  
     const [products, setProducts] = useState([])
@@ -58,6 +59,7 @@ const Products = (props) => {
                         <img src={product.photo_one}/>
                         <img src={product.photo_two}/>
                         <div>{product.description}</div>
+                        <Reviews/>
                         {user &&
                         <button onClick={() =>
                         handleAddToCart(product.product_id)}>Add To Cart</button>}

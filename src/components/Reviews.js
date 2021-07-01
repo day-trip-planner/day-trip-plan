@@ -1,12 +1,13 @@
 import ReactStars from "react-rating-stars-component";
 import React from "react";
-import { render } from "react-dom";
+// import { render } from "react-dom";
  
-const ratingChanged = (newRating) => {
+const Reviews = (newRating) => {
+  const ratingChanged = () => {
+
+  }
   console.log(newRating);
-};
- 
-render(
+  return(
   <ReactStars
     count={5}
     onChange={ratingChanged}
@@ -16,7 +17,22 @@ render(
     halfIcon={<i className="fa fa-star-half-alt"></i>}
     fullIcon={<i className="fa fa-star"></i>}
     activeColor="#ffd700"
-  />,
+  />
+  )
+};
  
-  document.getElementById(Review)
-);
+export default Reviews
+// render(
+//   <ReactStars
+//     count={5}
+//     onChange={ratingChanged}
+//     size={24}
+//     isHalf={true}
+//     emptyIcon={<i className="far fa-star"></i>}
+//     halfIcon={<i className="fa fa-star-half-alt"></i>}
+//     fullIcon={<i className="fa fa-star"></i>}
+//     activeColor="#ffd700"
+//   />,
+ 
+//   document.getElementById(Review)
+// );
