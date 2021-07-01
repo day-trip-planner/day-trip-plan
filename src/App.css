@@ -16,6 +16,12 @@ body {
 button{
   background-color: #FFCAD4;
   cursor: pointer;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+button:hover {
+  background-color: #F4ACB7;
 }
 
 
@@ -38,6 +44,11 @@ img {
   margin: 25px;
   -webkit-box-shadow: 8px 12px 12px 6px rgba(0,0,0,0.81); 
   box-shadow: 8px 12px 12px 6px rgba(0,0,0,0.81);
+}
+
+img:hover {
+  height: 325px;
+  width: 325px;
 }
 
 .rev-container {
@@ -104,3 +115,26 @@ padding: 50px
   cursor: pointer;
   
 }
+
+.payment-form {
+  position: absolute;
+  left: 40%;
+  top: 30%;
+  font-weight: 500;
+  height: 400px;
+  width: 400px;
+  background-color: #FFE5D9;
+  text-align: center;
+  -webkit-box-shadow: 5px 5px 15px 5px #000000; 
+box-shadow: 5px 5px 15px 5px #000000;
+}
+
+
+/* iconColor: "#c4f0ff",
+			color: "#fff",
+			fontWeight: 500,
+			fontFamily: "Roboto, Open Sans, Segoe UI, sans-serif",
+			fontSize: "16px",
+			fontSmoothing: "antialiased",
+			":-webkit-autofill": { color: "#fce883" },
+			"::placeholder": { color: "#87bbfd" } */
