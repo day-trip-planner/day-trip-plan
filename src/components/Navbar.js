@@ -35,6 +35,7 @@ function Navbar(props) {
                     <Link to='/products'>Locations</Link>
                     <Link to='/cart'>Cart</Link>
                     <Link to='/reviews'>Reviews</Link>
+                    <Link to ='/checkout'>Checkout</Link>
                     {user ? <Link to='/' onClick={handleLogout}>Logout</Link> : null}
 
                 </div>

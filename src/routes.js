@@ -4,6 +4,7 @@ import Cart from './components/Cart';
 import Dashboard from './components/Dashboard';
 import Reviews from './components/Reviews';
 import Products from './components/Products'
+import Checkout from "./components/Checkout";
 
 export default (
     <Switch>
@@ -12,5 +13,6 @@ export default (
         <Route exact path='/cart' component={Cart} />
         <Route exact path='/products' component={Products} />
         <Route exact path='/reviews' component={Reviews} />
+        <Route exact path='/checkout' component={Checkout} />
     </Switch>
 )

@@ -32,6 +32,10 @@
   margin-left: 15px;
 }
 
+.Navbar .leftSide .links a:hover {
+  font-size: x-large;
+}
+
 .Navbar .rightSide{
   flex: 50%;
   display: flex;

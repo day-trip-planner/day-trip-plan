@@ -58,9 +58,8 @@ const Cart = (props) => {
 
   return(
     <div>
-      <h1>Cart Page</h1>
-      <h1>Cart Checkout</h1>
-      <button>Checkout</button>
+      <h1>Cart</h1>
+      <button>Proceed to Checkout</button>
       {cart.map((product) => {
         return(       
           <div key={product.product_cart_id}>
