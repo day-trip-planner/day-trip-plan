@@ -3,7 +3,8 @@ import '../styles/reviews.css'
 
 
 const Reviews = () => {
-  return (
+  return(
+
     <div>
       <h1>Review Page</h1>
     </div>
