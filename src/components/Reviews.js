@@ -1,3 +1,4 @@
+import ReactStars from "react-rating-stars-component";
 import React from "react";
 import '../styles/reviews.css'
 
