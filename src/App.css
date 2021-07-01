@@ -16,7 +16,6 @@ body {
 button{
   background-color: #FFCAD4;
   cursor: pointer;
-  background-color: #FFCAD4;
 }
 
 
@@ -71,3 +70,37 @@ img {
 	padding: 11px 15px 11px 0;
 }
 
+.product-title{
+  width: 100%;
+}
+.product-container{
+  margin: 0 auto;
+  padding:25px;
+  width: 1600px;
+	display: flex;
+  flex-wrap: wrap;
+	flex-direction: row;
+	align-content: stretch;
+}
+.product-item{
+width: 700px;
+padding: 50px
+}
+.product-img-container{
+  display: flex;
+
+}
+.cart-icon-container{
+  position: fixed;
+  top: 100px;
+  right: 20px;
+  height: 100px;
+  width: 100px;
+  background-color: #9D8189;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  
+}
