@@ -6,6 +6,7 @@ import {setCart} from '../redux/cartReducer';
 import Checkout from './Checkout'
 import StripeContainer from './StripeContainer'
 import '../styles/cart.css'
+import { Link } from 'react-router-dom'
 
 
 const Cart = (props) => {
@@ -59,7 +60,9 @@ const Cart = (props) => {
   return(
     <div>
       <h1>Cart</h1>
+      <Link to='/checkout'>
       <button>Proceed to Checkout</button>
+      </Link>
       {cart.map((product) => {
         return(       
           <div key={product.product_cart_id}>
