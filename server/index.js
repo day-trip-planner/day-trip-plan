@@ -24,9 +24,9 @@ const app = express();
 // app.use(bodyParser.json())
 
 app.use(cors())
-
 app.post("/payment", cors(), async (req, res) => {
 	let { amount, id } = req.body
+	
 	try {
 		const payment = await stripe.paymentIntents.create({
 			amount,

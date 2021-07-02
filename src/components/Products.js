@@ -58,8 +58,8 @@ const Products = (props) => {
                         <div>{product.name}</div>
                         <div>$ {product.price}</div>
                         <div className="product-img-container">
-                            <img src={product.photo_one} />
-                            <img src={product.photo_two} />
+                            <img className='prod-img' src={product.photo_one} />
+                            <img className='prod-img' src={product.photo_two} />
                         </div>
                         <div>{product.description}</div>
                         <Reviews />
