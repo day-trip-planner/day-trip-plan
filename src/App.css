@@ -3,6 +3,7 @@
   min-height: calc(100vh - 70px);
   position: relative;
   padding-bottom: 70px;
+  background-color: #FFE5D9;
 
 } 
 
@@ -124,7 +125,8 @@ text-align: center;
   background-color: #FFE5D9;
   text-align: center;
   -webkit-box-shadow: 5px 5px 15px 5px #000000; 
-box-shadow: 5px 5px 15px 5px #ee07bc;
+box-shadow: 5px 5px 15px 5px #0f0f0f;
+border-radius: 15px;
 }
 
 .prod-img {
@@ -133,4 +135,9 @@ box-shadow: 5px 5px 15px 5px #ee07bc;
 .prod-img:hover {
   -webkit-box-shadow: 14px 14px 29px 12px #000000; 
   box-shadow: 14px 14px 29px 12px #000000;
+}
+
+.prod-title {
+  font-weight: 500;
+  font-size: xx-large;
 }
