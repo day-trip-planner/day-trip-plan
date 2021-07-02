@@ -24,30 +24,7 @@ const app = express();
 // app.use(bodyParser.json())
 
 app.use(cors())
-app.post("/payment", cors(), async (req, res) => {
-	let { amount, id } = req.body
-	
-	try {
-		const payment = await stripe.paymentIntents.create({
-			amount,
-			currency: "USD",
-			description: "Spatula company",
-			payment_method: id,
-			confirm: true
-		})
-		console.log("Payment", payment)
-		res.json({
-			message: "Payment successful",
-			success: true
-		})
-	} catch (error) {
-		console.log("Error", error)
-		res.json({
-			message: "Payment failed",
-			success: false
-		})
-	}
-})
+
 // Top Level Middleware
 app.use(express.json())
 // Sessions & cookies
@@ -92,3 +69,28 @@ app.get('/api/reviews', reviewsCtrl.getReview)
 app.post('/api/reviews/:review_id', reviewsCtrl.addToReview)
 app.delete('/api/reviews/:review_id', reviewsCtrl.deleteItemFromReview)
 app.put('/api/reviews/:review_id', reviewsCtrl.editReview)
+
+app.post("/payment", cors(), async (req, res) => {
+	let { amount, id } = req.body
+	
+	try {
+		const payment = await stripe.paymentIntents.create({
+			amount,
+			currency: "USD",
+			description: "Spatula company",
+			payment_method: id,
+			confirm: true
+		})
+		// console.log("Payment", payment)
+		res.json({
+			message: "Payment successful",
+			success: true
+		})
+	} catch (error) {
+		console.log("Error", error)
+		res.json({
+			message: "Payment failed",
+			success: false
+		})
+	}
+})
