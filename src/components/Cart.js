@@ -59,8 +59,8 @@ const Cart = (props) => {
   }
 
   return (
-    <div>
-      <h1 >Checkout</h1>
+    <div className="product-container">
+      <div className="product-title"><h1 >Checkout</h1></div>
       <Link to='/checkout'>
         <div className="cart-icon-container">  <ShoppingCartIcon style={{ fontSize: 70, color: 'white' }} /></div>
       </Link>
