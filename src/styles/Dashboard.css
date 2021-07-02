@@ -7,7 +7,7 @@
     position: relative;
   }
   .dash-text-left{
-    color:blanchedalmond;
+    color:#FFE5D9;
     font-size: 100px;
     position: absolute;
     top: 200px;
@@ -18,7 +18,7 @@
     height: 50px;
   }
   .dash-text-right{
-    color:blanchedalmond;
+    color:#FFE5D9;
     font-size: 20px;
     position: absolute;
     top: 10px;

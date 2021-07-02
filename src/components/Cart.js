@@ -69,11 +69,11 @@ const Cart = (props) => {
           <div className="product-item" key={product.product_cart_id}>
             <div>{product.name}</div>
             <div>$ {product.price}</div>
-            <img src={product.photo_one} />
-            <img src={product.photo_two} />
+            <img className='prod-img' src={product.photo_one} />
+            <img className='prod-img' src={product.photo_two} />
             <h5>Qty: {product.quantity}</h5>
             <button onClick={() => handleChangeQty(product.product_id, product.quantity - 1)}>-</button>
-            <button onClick={() => handleDeleteFromCart(product.product_id)}>X</button>
+            <button onClick={() => handleDeleteFromCart(product.product_id)}>Delete Item</button>
             <button onClick={() => handleChangeQty(product.product_id, product.quantity + 1)}>+</button>
           </div>
         )
