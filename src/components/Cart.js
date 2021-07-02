@@ -60,14 +60,14 @@ const Cart = (props) => {
 
   return (
     <div className="product-container">
-      <div className="product-title"><h1 >Checkout</h1></div>
+      <div className="product-title"><h1>Cart</h1></div>
       <Link to='/checkout'>
         <div className="cart-icon-container">  <ShoppingCartIcon style={{ fontSize: 70, color: 'white' }} /></div>
       </Link>
       {cart.map((product) => {
         return (
           <div className="product-item" key={product.product_cart_id}>
-            <div>{product.name}</div>
+            <div className='prod-title' >{product.name}</div>
             <div>$ {product.price}</div>
             <img className='prod-img' src={product.photo_one} />
             <img className='prod-img' src={product.photo_two} />
