@@ -71,7 +71,8 @@ export default function PaymentForm() {
         </form>
         :
        <div>
-           <h2>Complete Payment</h2>
+           <h2>Payment Successful</h2>
+           <h5>Enjoy Your Trip!!</h5>
        </div> 
         }
             
